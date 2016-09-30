@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+
+    UINavigationController * na = [[UINavigationController alloc] init];
+    na.view.backgroundColor = [UIColor grayColor];
+    ViewController * vc = [[ViewController alloc] init];
+    na.viewControllers = @[vc];
+    self.window.rootViewController = na;
+
     return YES;
 }
 
